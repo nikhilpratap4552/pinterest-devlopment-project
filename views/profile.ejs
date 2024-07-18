@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/feed.css">
+</head>
+<body>
+  
+  <div class="header">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/pinterest-round-color-icon.png" class="icon pinterest-icon">
+    <ul class="navigation">
+      <a href="/profile" >Home</a>
+      <a href="/feed">Explore</a>
+      <a href="/create">Create</a>
+    </ul>
+    <div class="search-bar">
+      
+      <input type="text" placeholder="Search">
+    </div>
+    <div class="nav-icons">
+        <a href="/logout">Logout</a>
+      <!-- <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/bell-icon.png" class="icon nav-icon">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/speech-bubble-black-icon.png" class="icon nav-icon">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/angle-bottom-icon.png" class="icon nav-icon arrow-icon"> -->
+    </div>
+  </div>
+  <div class="profile">
+    <div>
+      <img src="https://images.pexels.com/photos/18684051/pexels-photo-18684051/free-photo-of-a-large-building-with-a-large-arched-entrance.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="profile picture">
+    </div>
+    <h2 class="name"><%= user.fullname %></h2>
+    <h3 class="username">@<%= user.username %></h3>
+    <p>Lorem ipsum dolor sit amet consectetur adi</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni!</p>
+  </div>
+
+  <!-- <div class="forms">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input class="form2" type="text" name="description" placeholder="image description">
+    <input class="form1" type="submit">
+    </form>
+  </div> -->
+
+  
+
+  <div class="grid">
+    <div class="grid-item">
+      <% user.posts.forEach( function(post){ %>
+        <div>
+          <img src="/images/uploads/<%= post.image%>" alt="image" />
+        </div>
+       <% }) %> 
+
+    </div>
+  </div>
+
+<div class="grid">
+  <div class="grid-item">
+    <img src="https://images.unsplash.com/photo-1695010800005-50cb50823351?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUzNDIzNzl8&ixlib=rb-4.0.3&q=85" />
+  </div>
+
+  <div class="grid-item">
+    <img src="https://images.unsplash.com/photo-1693222918463-b3478d35131c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUzNDI0Mzh8&ixlib=rb-4.0.3&q=85" />
+  </div>
+
+  <div class="grid-item">
+    <img src="https://images.unsplash.com/photo-1693074446789-f2d6295e32c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTUzNDI2ODh8&ixlib=rb-4.0.3&q=85" />
+  </div>
+
+</div>
+
+
+
+  <!-- <script>
+    $(".grid").imagesLoaded(function() {
+      $(".grid").masonry({
+        itemSelector: ".grid-item"
+      });
+    });
+  </script> -->
+  <script src="feed.js"></script>
+
+
+</body>
+</html>
